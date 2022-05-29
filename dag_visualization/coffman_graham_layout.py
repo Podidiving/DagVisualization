@@ -11,9 +11,9 @@ class CoffmanGrahamLayout:
     @staticmethod
     def make_visualization(
         dag: nx.DiGraph,
-        max_width: Optional[float] = None,
+        max_width: Optional[int] = None,
         save_path: Optional[str] = None,
-    ) -> Dict[Hashable, Tuple[float, float]]:
+    ) -> None:
         _dag = nx.algorithms.dag.transitive_reduction(dag)
 
         algorithm = distribution_builder(max_width)
